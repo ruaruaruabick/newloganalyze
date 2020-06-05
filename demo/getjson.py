@@ -4,7 +4,7 @@ import getopt
 import pandas as pd
 import json
 
-inputlog1 = "cart1_good"
+inputlog1 = "cart1_error1"
 
 def parsepa(patter,eanda):
     for i in eanda:

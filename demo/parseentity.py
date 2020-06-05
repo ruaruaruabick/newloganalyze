@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding:utf8 -*-
 
-inputlog1 = "cart1_good"
+inputlog1 = "cart1_error1"
 #inputlog1 = "HDFS_2k"
 from polyglot.detect import Detector
 from polyglot.text import Text
@@ -89,7 +89,7 @@ for index, row in ep.iterrows():
             entityparaposs[entity] = entityparaposs[entity] + 1
 entityparaposs = sort_by_value(entityparaposs)
 #将参数与实体对应起来
-INPUT4 = 'IPLoM_result/'+inputlog2
+INPUT4 = 'IPLoM_result/'+"attlist"
 tempf = open(INPUT4,'w')
 
 for index, row in ep.iterrows():
