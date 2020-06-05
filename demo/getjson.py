@@ -4,7 +4,8 @@ import getopt
 import pandas as pd
 import json
 
-#
+inputlog1 = "cart1_good"
+
 def parsepa(patter,eanda):
     for i in eanda:
         if i == '\n' and len(eanda) == 1:
@@ -63,13 +64,15 @@ class workflowjson():
 #logkeyfile=命令行
 patternlist = []
 workflowlist = []
-data = pd.read_csv("IPLoM_result/cart1.log_LogKey.csv")
+INPUT1 = "IPLoM_result/"+inputlog1+".log_LogKey.csv"
+data = pd.read_csv("INPUT1")
 for row in data.iterrows():
     row = row[1]
     key = int(row['LogKey'])
     patternlist.append(patternjson(row["patternid"],key,row["pattern"],[],"relation").__dict__)
 #读入实体
-with open('IPLoM_result/entitydata.json','r') as f:
+INPUT2 = "IPLoM_result/"+inputlog1+".json"
+with open(INPUT2,'r') as f:
     relation = json.loads(f.read())
     for i in range(len(relation)):
         for en in relation['sent' + str(i + 1)]['entities']:

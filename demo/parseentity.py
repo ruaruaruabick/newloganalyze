@@ -1,10 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf8 -*-
 
-inputlog1 = "cart1"
-inputlog2 = "attlist"
+inputlog1 = "cart1_good"
 #inputlog1 = "HDFS_2k"
-#inputlog2 = HDFSattlist
 from polyglot.detect import Detector
 from polyglot.text import Text
 import os
